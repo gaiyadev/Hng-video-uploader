@@ -25,7 +25,7 @@ $ npm start
 **Request:**
 
 - **Method:** POST
-- **URL:** `/api/videos`
+- **URL:** `https://hngtastfive-video-uploader.onrender.com/api/videos`
 - **Request Content-Type:** ` multipart/form-data`
 - **Payload:**
 
@@ -51,7 +51,7 @@ Status Code: 201 Created
 **Request:**
 
 - **Method:** GET
-- **Endpoint:**  `/api/videos:filename`
+- **Endpoint:**  `https://hngtastfive-video-uploader.onrender.com/api/videos:filename`
 
 Response:
 
