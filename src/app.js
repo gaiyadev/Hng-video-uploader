@@ -77,7 +77,7 @@ app.get('/api/videos/:filename', (req, res) => {
 
 
 //  Fetch All
-app.get('/api/videos', (req, res) => {
+app.get('/videos', (req, res) => {
     const videoUploadsDirectory = './uploads';
   fs.readdir(videoUploadsDirectory, (err, files) => {
     if (err) {
