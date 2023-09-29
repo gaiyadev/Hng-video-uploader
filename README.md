@@ -51,7 +51,7 @@ Status Code: 201 Created
 **Request:**
 
 - **Method:** GET
-- **Endpoint:**  `/api/upload`
+- **Endpoint:**  `/api/upload:filename`
 
 Response:
 

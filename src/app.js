@@ -38,6 +38,7 @@ const upload = multer({
 
 // Middleware to parse JSON requests
 app.use(express.json());
+app.use('/uploads', express.static('uploads'));
 
 app.get('/api/', (req, res) => {
   res.json({ message: 'Hello World' });
@@ -52,6 +53,28 @@ app.post('/api/videos', upload.single('video'), (req, res) => {
 
 return res.status(201).json({ message: 'File uploaded successfully', filename: req.file.filename });
 });
+
+
+app.get('/api/videos/:filename', (req, res) => {
+  const { filename } = req.params;
+  const videoUploadsDirectory = './uploads';
+
+  fs.readdir(videoUploadsDirectory, (err, files) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ message: 'Internal server error' });
+    }
+
+    // Check if the requested filename exists in the uploads directory
+    if (files.includes(filename)) {
+      // Return the video file name
+      return res.status(200).json({ video: filename });
+    } else {
+      return res.status(404).json({ message: 'Video not found' });
+    }
+  });
+});
+
 
 //  Fetch All
 app.get('/api/videos', (req, res) => {
