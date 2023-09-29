@@ -3,8 +3,8 @@
 ## Installation
 
 ```bash
-$ git clone https://github.com/gaiyadev/Hng-stage-2-task.git
-$ cd Hng-stage-2-task
+$ git clone https://github.com/gaiyadev/Hng-video-uploader.git
+$ cd video-uploader
 ```
 
 ```bash
@@ -25,7 +25,7 @@ $ npm start
 **Request:**
 
 - **Method:** POST
-- **URL:** `/api/upload`
+- **URL:** `/api/videos`
 - **Request Content-Type:** ` multipart/form-data`
 - **Payload:**
 
@@ -51,7 +51,7 @@ Status Code: 201 Created
 **Request:**
 
 - **Method:** GET
-- **Endpoint:**  `/api/upload:filename`
+- **Endpoint:**  `/api/videos:filename`
 
 Response:
 
