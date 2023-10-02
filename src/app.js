@@ -124,7 +124,7 @@ async function publishToRabbitMQ(transcription) {
 }
 
 
-app.get('/videos/:videoId', (req, res) => {
+app.get('/upload/:videoId', (req, res) => {
     const videoId = req.params.videoId;
     const videoPath = `uploads/${videoId}.webm`; // Path to your WebM video file
 

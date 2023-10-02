@@ -25,13 +25,13 @@ $ npm start
 **Request:**
 
 - **Method:** POST
-- **URL:** `https://hngtastfive-video-uploader.onrender.com/api/videos`
-- **Request Content-Type:** ` multipart/form-data`
+- **URL:** `https://hngtastfive-video-uploader.onrender.com/api/upload`
+- **Request Content-Type:** `application/json`
 - **Payload:**
 
 ```json
 {
-  "video ":  "multipart"
+  "chunks ":  "array of json"
 }
 ```
 
@@ -52,7 +52,7 @@ Status Code: 201 Created
 **Request:**
 
 - **Method:** GET
-- **Endpoint:**  `https://hngtastfive-video-uploader.onrender.com/api/videos:filename`
+- **Endpoint:**  `https://hngtastfive-video-uploader.onrender.com/api/upload:vidoeId`
 
 Response:
 
