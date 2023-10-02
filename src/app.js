@@ -19,7 +19,7 @@ const deepgram = new Deepgram(api_key);
 const videoChunks = [];
 
 // Modify the /upload endpoint to handle an array of video chunks
-app.post('/upload', async (req, res) => {
+app.post('/api/upload', async (req, res) => {
   const incomingChunks = req.body.chunks; // Assuming the chunks are sent in the request body as an array
 
   // Check if video chunks are present
@@ -124,7 +124,7 @@ async function publishToRabbitMQ(transcription) {
 }
 
 
-app.get('/upload/:videoId', (req, res) => {
+app.get('/api/upload/:videoId', (req, res) => {
     const videoId = req.params.videoId;
     const videoPath = `uploads/${videoId}.webm`; // Path to your WebM video file
 
